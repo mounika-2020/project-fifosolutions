@@ -117,7 +117,7 @@ body{
 /*section1*/
 .content-banner{
   color: #ffffff;
-  background-image: url("img/aboutus.jpg");
+  background-image: url("/img/aboutus.jpg");
   min-height: 400px;
   height: 100%;
   position: relative;

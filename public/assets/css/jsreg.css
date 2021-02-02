@@ -105,7 +105,7 @@ body{
 /*form*/
 section{
   /*background:url("img/jeshoots-com-pUAM5hPaCRI-unsplash.jpg") no-repeat center fixed;*/
-  background:url("img/login.jpg") no-repeat center fixed;
+  background:url("/img/login.jpg") no-repeat center fixed;
   background-size: cover;
   background-size: 1900px;
   align-items: center;

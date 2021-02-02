@@ -56,7 +56,7 @@ body{
 /*section*/
 .content-banner{
   color: #ffffff;
-  background-image: url("img/tech.jpg");
+  background-image: url("/img/tech.jpg");
   min-height: 400px;
   height: 100%;
   position: relative;

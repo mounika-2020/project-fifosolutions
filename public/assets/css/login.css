@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
 body{
   font-family: 'montserrat' sans-serif;
-    background-image: url("img/login.jpg");
+    background-image: url("/img/login.jpg");
     background-position: center center;
     background-size: cover;
 }

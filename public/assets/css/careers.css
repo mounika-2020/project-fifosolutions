@@ -109,7 +109,7 @@
 /*section1*/
 .content-banner{
   color: #ffffff;
-  background-image: url("img/carrer.jpg");
+  background-image: url("/img/carrer.jpg");
   min-height: 400px;
   height: 100%;
   position: relative;

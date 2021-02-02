@@ -120,7 +120,7 @@ body{
 }
 .content-banner{
   color: #ffffff;
-  background-image: url("img/clients.jpg");
+  background-image: url("/img/clients.jpg");
   min-height: 400px;
   height: 100%;
   position: relative;

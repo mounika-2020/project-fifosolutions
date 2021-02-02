@@ -31,8 +31,14 @@ app.get('/vendor', routes);
 app.post('/vendor', routes);
 app.get('/employee', routes);
 app.post('/register/employee', routes);
-//app.get('/benchsales',routes1);
-//app.post('/benchsales', routes1);
+app.get('/benchsales',routes);
+app.post('/benchsales', routes);
+app.get('/jsreg',routes);
+app.post('/jobseekerreg', routes);
+app.get('/trainingreg',routes);
+app.post('/training', routes);
+app.get('/contactus',routes);
+app.post('/contactus', routes);
 app.get('/suc',(req,res) =>{
   res.render('suc');
 });

@@ -1,9 +1,9 @@
 var localStrategy = require('passport-local').Strategy;
 const employeemodel = require('../models/employeemodel');
 const vendormodel = require('../models/vendormodel');
-//const benchsalesmodel = require('../models/benchsalesmodel');
-//const trainingmodel = require('../models/trainingmodel');
-//const jobseekermodel = require('../models/jodseekermodel');
+const benchsalesmodel = require('../models/benchsalesmodel');
+const trainingmodel = require('../models/trainingmodel');
+const jobseekermodel = require('../models/jobseekermodel');
 const bcrypt = require('bcryptjs');
 
 function SessionConstructor(userId, userGroup, details) {
@@ -73,26 +73,7 @@ module.exports = function (passport) {
 
         });
     }));
-    passport.use('training', new localStrategy({ usernameField: 'email' }, (email, password, done) => {
-        trainingmodel.findOne({ email: email }, (err, data) => {
-            if (err) throw err;
-            if (!data) {
-                return done(null, false, { message: "User Doesn't Exists.." });
-            }
-            bcrypt.compare(password, data.password, (err, match) => {
-               if (err) {
-                    return done(null, false);
-                }
-                if (!match) {
-                    return done(null, false, { message: "Password Doesn't Match" });
-                }
-                if (match) {
-                    return done(null, data);
-                }
-            });
 
-        });
-    }));
     passport.use('jobseeker', new localStrategy({ usernameField: 'email' }, (email, password, done) => {
         jobseekermodel.findOne({ email: email }, (err, data) => {
             if (err) throw err;
@@ -113,7 +94,26 @@ module.exports = function (passport) {
 
         });
     }));
+    passport.use('training', new localStrategy({ usernameField: 'email' }, (email, password, done) => {
+        trainingmodel.findOne({ email: email }, (err, data) => {
+            if (err) throw err;
+            if (!data) {
+                return done(null, false, { message: "User Doesn't Exists.." });
+            }
+            bcrypt.compare(password, data.password, (err, match) => {
+               if (err) {
+                    return done(null, false);
+                }
+                if (!match) {
+                    return done(null, false, { message: "Password Doesn't Match" });
+                }
+                if (match) {
+                    return done(null, data);
+                }
+            });
 
+        });
+    }));
 
     passport.serializeUser(function (userObject, done) {
    // userObject could be a Model1 or a Model2... or Model3, Model4, etc.
@@ -123,7 +123,13 @@ module.exports = function (passport) {
        userGroup = "model1";
      } else if (userPrototype === vendormodel.prototype) {
      userGroup = "model2";
-    }
+   }else if (userPrototype === benchsalesmodel.prototype) {
+    userGroup = "model3";
+   }else if (userPrototype === jobseekermodel.prototype) {
+    userGroup = "model4";
+   }else if (userPrototype === trainingmodel.prototype) {
+    userGroup = "model5";
+   }
     let sessionConstructor = new SessionConstructor(userObject.id, userGroup, '');
     done(null,sessionConstructor);
    });
@@ -138,6 +144,25 @@ module.exports = function (passport) {
      });
    } else if (sessionConstructor.userGroup == 'model2') {
      vendormodel.findOne({
+         _id: sessionConstructor.userId
+     }, '-localStrategy.password', function (err, user) { // When using string syntax, prefixing a path with - will flag that path as excluded.
+         done(err, user);
+     });
+   }
+   else if (sessionConstructor.userGroup == 'model3') {
+     benchsalesmodel.findOne({
+         _id: sessionConstructor.userId
+     }, '-localStrategy.password', function (err, user) { // When using string syntax, prefixing a path with - will flag that path as excluded.
+         done(err, user);
+     });
+   } else if (sessionConstructor.userGroup == 'model4') {
+     jobseekermodel.findOne({
+         _id: sessionConstructor.userId
+     }, '-localStrategy.password', function (err, user) { // When using string syntax, prefixing a path with - will flag that path as excluded.
+         done(err, user);
+     });
+   } else if (sessionConstructor.userGroup == 'model5') {
+     trainingmodel.findOne({
          _id: sessionConstructor.userId
      }, '-localStrategy.password', function (err, user) { // When using string syntax, prefixing a path with - will flag that path as excluded.
          done(err, user);

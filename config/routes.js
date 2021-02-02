@@ -5,6 +5,10 @@ const bodyparser = require('body-parser');
 const bcrypt = require('bcryptjs');
 const vendormodel = require('../models/vendormodel');
 const employeemodel = require('../models/employeemodel');
+const benchsalesmodel = require('../models/benchsalesmodel');
+const jobseekermodel = require('../models/jobseekermodel');
+const trainingmodel = require('../models/trainingmodel');
+const contactusmodel = require('../models/contactusmodel');
 const passport = require('passport');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -194,6 +198,199 @@ routes.post('/vendor', (req, res) => {
     }
 });
 
+
+routes.get('/benchsales', (req, res) => {
+    res.render('benchsales');
+})
+
+routes.post('/benchsales', (req, res) => {
+     var { username,email,cname,phone, password, cpass} = req.body;
+    var err;
+    if (!username || !email || !cname || !phone || !password || !cpass) {
+        err = "Please Fill All The Fields...";
+        res.render('benchsales', { 'err': err });
+    }
+    if (password != cpass) {
+        err = "Passwords Don't Match";
+        res.render('benchsales', { 'err': err,  'username': username ,'email': email,'cname':cname, 'phone':phone});
+    }
+    if (typeof err == 'undefined') {
+        benchsalesmodel.findOne({ email: email }, function (err, data) {
+            if (err) throw err;
+            if (data) {
+                console.log("User Exists");
+                err = "User Already Exists With This Email...";
+                res.render('benchsales', { 'err': err, 'username': username,'email': email, 'cname':cname,'phone':phone});
+            } else {
+                bcrypt.genSalt(10, (err, salt) => {
+                    if (err) throw err;
+                    bcrypt.hash(password, salt, (err, hash) => {
+                        if (err) throw err;
+                        password = hash;
+                        benchsalesmodel({
+                          username,
+                            email,
+                            cname,
+                            phone,
+                          password,
+                        }).save((err, data) => {
+                            if (err) throw err;
+                             req.flash('success_message', "Registered Successfully.. Login To Continue..");
+                            res.redirect('/suc');
+                        });
+                    });
+                });
+            }
+        });
+    }
+});
+
+routes.get('/jsreg', (req, res) => {
+    res.render('jsreg');
+})
+
+routes.post('/jobseekerreg', (req, res) => {
+     var { fname,lname,email,password, cpass,mobile,location,date,title, experience,resume,salary,employment,relocate,visa} = req.body;
+    var err;
+    if (!fname || !lname || !email || !password || !cpass || !mobile || !location || !title || !experience || !resume || !salary || !employment || !relocate  || !visa) {
+        err = "Please Fill All The Fields...";
+        res.render('jsreg', { 'err': err });
+    }
+    if (password != cpass) {
+        err = "Passwords Don't Match";
+        res.render('jsreg', { 'err': err,  'fname': fname ,'lname': lname ,'email': email, 'mobile':mobile,'location':location,'title':title,'experience': experience, 'resume':resume,'salary':salary,'employment':employment,'relocate':relocate,'visa':visa});
+    }
+    if (typeof err == 'undefined') {
+        jobseekermodel.findOne({ email: email }, function (err, data) {
+            if (err) throw err;
+            if (data) {
+                console.log("User Exists");
+                err = "User Already Exists With This Email...";
+                res.render('jsreg', { 'err': err, 'fname': fname ,'lname': lname ,'email': email, 'mobile':mobile,'location':location,'title':title,'experience': experience, 'resume':resume,'salary':salary,'employment':employment,'relocate':relocate,'visa':visa});
+            } else {
+                bcrypt.genSalt(10, (err, salt) => {
+                    if (err) throw err;
+                    bcrypt.hash(password, salt, (err, hash) => {
+                        if (err) throw err;
+                        password = hash;
+                        jobseekermodel({
+                          fname,
+                          lname,
+                            email,
+                            mobile,
+                            location,
+                            date,
+                            title,
+                            experience,
+                            resume,
+                            salary,
+                            employment,
+                            relocate,
+                            visa,
+                          password,
+                        }).save((err, data) => {
+                            if (err) throw err;
+                             req.flash('success_message', "Registered Successfully.. Login To Continue..");
+                            res.redirect('/suc');
+                        });
+                    });
+                });
+            }
+        });
+    }
+});
+
+
+routes.get('/trainingreg', (req, res) => {
+    res.render('trainingreg');
+})
+
+routes.post('/training', (req, res) => {
+     var { username,email,phone,tech,visa,password, cpass} = req.body;
+    var err;
+    if (!username || !email || !phone || !tech || !visa  || !password || !cpass) {
+        err = "Please Fill All The Fields...";
+        res.render('trainingreg', { 'err': err });
+    }
+    if (password != cpass) {
+        err = "Passwords Don't Match";
+        res.render('trainingreg', { 'err': err,  'username': username ,'email': email, 'phone':phone,'tech':tech,'visa':visa});
+    }
+    if (typeof err == 'undefined') {
+        trainingmodel.findOne({ email: email }, function (err, data) {
+            if (err) throw err;
+            if (data) {
+                console.log("User Exists");
+                err = "User Already Exists With This Email...";
+                res.render('trainingreg', { 'err': err, 'username': username,'email': email, 'phone':phone,'tech':tech,'visa':visa});
+            } else {
+                bcrypt.genSalt(10, (err, salt) => {
+                    if (err) throw err;
+                    bcrypt.hash(password, salt, (err, hash) => {
+                        if (err) throw err;
+                        password = hash;
+                        trainingmodel({
+                          username,
+                            email,
+                            phone,
+                            tech,
+                            visa,
+                          password,
+                        }).save((err, data) => {
+                            if (err) throw err;
+                             req.flash('success_message', "Registered Successfully.. Login To Continue..");
+                            res.redirect('/suc');
+                        });
+                    });
+                });
+            }
+        });
+    }
+});
+
+routes.get('/contactus', (req, res) => {
+    res.render('contactus');
+})
+
+routes.post('/contactus', (req, res) => {
+     var { username,email,phone,country,subject,message} = req.body;
+    var err;
+    if (!username || !email || !phone || !country || !subject  || !message) {
+        err = "Please Fill All The Fields...";
+        res.render('contactus', { 'err': err });
+    }
+    if (typeof err == 'undefined') {
+        contactusmodel.findOne({ email: email }, function (err, data) {
+            if (err) throw err;
+            if (data) {
+                console.log("User Exists");
+                err = "User Already Exists With This Email...";
+                res.render('contactus', { 'err': err, 'username': username,'email': email, 'phone':phone,'country':country,'subject':subject,'message':message});
+            } /*else {
+                bcrypt.genSalt(10, (err, salt) => {
+                    if (err) throw err;
+                    bcrypt.hash(password, salt, (err, hash) => {
+                        if (err) throw err;
+                        password = hash;*/
+                        contactusmodel({
+                          username,
+                            email,
+                            phone,
+                            country,
+                            subject,
+                          message,
+                        }).save((err, data) => {
+                            if (err) throw err;
+                             req.flash('success_message', "Registered Successfully.. Login To Continue..");
+                            res.redirect('/suc');
+                        });
+                  /*  });
+                });
+            }*/
+        });
+    }
+});
+
 // Authentication Strategy
 // ---------------
 
@@ -201,7 +398,6 @@ routes.post('/vendor', (req, res) => {
 routes.get('/login', (req, res) => {
     res.render('login');
 });
-
 routes.post('/login', (req, res, next) => {
   if(req.body.typeOfLogin == 'employee'){
     passport.authenticate('employee', {
@@ -222,19 +418,19 @@ routes.post('/login', (req, res, next) => {
             successRedirect: '/success',
             failureFlash: true,
         })(req, res, next);
-      }  else if(req.body.typeOfLogin == 'training'){
-          passport.authenticate('training', {
-              failureRedirect: '/login',
-              successRedirect: '/success',
-              failureFlash: true,
-          })(req, res, next);
-        }  else if(req.body.typeOfLogin == 'joseeker'){
+      }   else if(req.body.typeOfLogin == 'joseeker'){
             passport.authenticate('joseeker', {
                 failureRedirect: '/login',
                 successRedirect: '/success',
                 failureFlash: true,
             })(req, res, next);
-          }
+          } else if(req.body.typeOfLogin == 'training'){
+              passport.authenticate('training', {
+                  failureRedirect: '/login',
+                  successRedirect: '/success',
+                  failureFlash: true,
+              })(req, res, next);
+            }
 
 });
 

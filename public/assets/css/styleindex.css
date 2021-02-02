@@ -276,7 +276,7 @@ p{
 
 
 .proud{
-  background-image: url('../asserts/images/jeshoots-com-pUAM5hPaCRI-unsplash.jpg');
+  background-image: url('/img/jeshoots-com-pUAM5hPaCRI-unsplash.jpg');
    background-attachment: fixed;
    background-size: cover;
    background-position: center center;
@@ -313,7 +313,7 @@ p{
   justify-content: center;
   text-align: center;
   /*background:#F5F5F5;*/
-    background-image: url('../asserts/images/pexels-peng-liu-169647.jpg');
+    background-image: url('/img/pexels-peng-liu-169647.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
@@ -361,11 +361,11 @@ h3
   text-transform: uppercase;
 }
 /*section6*/
-/*.section-6 .container-fluid{
-  background-image: url('../asserts/images/pexels-rodolfo-clix-1036936.jpg');
+.section-6{
+  background-image: url('/img/pexels-rodolfo-clix-1036936.jpg');
   background-size: cover;
   background-attachment: fixed;
-}*/
+}
 .section-6 .heading-1{
   margin-top: 20%;
   margin-left: 5%;
