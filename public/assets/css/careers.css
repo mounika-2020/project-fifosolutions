@@ -109,7 +109,7 @@
 /*section1*/
 .content-banner{
   color: #ffffff;
-  background-image: url("/img/carrer.jpg");
+  background-image: url("/img/career.jpg");
   min-height: 400px;
   height: 100%;
   position: relative;
@@ -290,9 +290,6 @@ footer{
 /*  width: 15%;*/
   background: #f12020;
   top: -10px;
-}
-.left .content1 p{
-  text-align: justify;
 }
 .left .content1 .social{
   margin: 20px 0 0 0;

@@ -56,7 +56,7 @@ body{
 /*section*/
 .content-banner{
   color: #ffffff;
-  background-image: url("/img/e.jpg");
+  background-image: url("/img/ecommerce.jpg");
   min-height: 400px;
   height: 100%;
   position: relative;
@@ -324,9 +324,6 @@ footer{
 /*  width: 15%;*/
   background: #f12020;
   top: -10px;
-}
-.left .content p{
-  text-align: justify;
 }
 .left .content .social{
   margin: 20px 0 0 0;

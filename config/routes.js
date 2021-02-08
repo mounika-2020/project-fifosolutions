@@ -140,7 +140,9 @@ routes.post('/register/employee', (req, res) => {
                         }).save((err, data) => {
                             if (err) throw err;
                              req.flash('success_message', "Registered Successfully.. Login To Continue..");
+                            //res.redirect('/suc');
                             res.redirect('/suc');
+                          //  res.render('/suc');
                         });
                     });
                 });
@@ -190,6 +192,7 @@ routes.post('/vendor', (req, res) => {
                             if (err) throw err;
                              req.flash('success_message', "Registered Successfully.. Login To Continue..");
                             res.redirect('/suc');
+
                         });
                     });
                 });
@@ -402,36 +405,51 @@ routes.post('/login', (req, res, next) => {
   if(req.body.typeOfLogin == 'employee'){
     passport.authenticate('employee', {
         failureRedirect: '/login',
-        successRedirect: '/success',
+        successRedirect: '/employeeaccount',
         failureFlash: true,
     })(req, res, next);
     debugger
   } else if(req.body.typeOfLogin == 'vendor'){
       passport.authenticate('vendor', {
           failureRedirect: '/login',
-          successRedirect: '/success',
+          successRedirect: '/vendoraccount',
           failureFlash: true,
       })(req, res, next);
     }  else if(req.body.typeOfLogin == 'benchsales'){
         passport.authenticate('benchsales', {
             failureRedirect: '/login',
-            successRedirect: '/success',
+            successRedirect: '/benchsalesaccount',
             failureFlash: true,
         })(req, res, next);
-      }   else if(req.body.typeOfLogin == 'joseeker'){
-            passport.authenticate('joseeker', {
+      }   else if(req.body.typeOfLogin == 'jobseeker'){
+            passport.authenticate('jobseeker', {
                 failureRedirect: '/login',
-                successRedirect: '/success',
+                successRedirect: '/jobseekeraccount',
                 failureFlash: true,
             })(req, res, next);
           } else if(req.body.typeOfLogin == 'training'){
               passport.authenticate('training', {
                   failureRedirect: '/login',
-                  successRedirect: '/success',
+                  successRedirect: '/trainingaccount',
                   failureFlash: true,
               })(req, res, next);
             }
 
+});
+routes.get('/employeeaccount', checkAuthenticated, (req, res) => {
+    res.render('employeeaccount', { 'user': req.user });
+});
+routes.get('/vendoraccount', checkAuthenticated, (req, res) => {
+    res.render('vendoraccount', { 'user': req.user });
+});
+routes.get('/benchsalesaccount', checkAuthenticated, (req, res) => {
+    res.render('benchsalesaccount', { 'user': req.user });
+});
+routes.get('/jobseekeraccount', checkAuthenticated, (req, res) => {
+    res.render('jobseekeraccount', { 'user': req.user });
+});
+routes.get('/trainingaccount', checkAuthenticated, (req, res) => {
+    res.render('trainingaccount', { 'user': req.user });
 });
 
 routes.get('/success', checkAuthenticated, (req, res) => {

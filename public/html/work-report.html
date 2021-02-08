@@ -1,241 +1,537 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fifo aboutuspage</title>
-    <link rel="icon" href="../Favicon/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Fifo bench sales page</title>
+      <link rel="icon" href="img/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="css/employee.css">-->
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/aboutus.css">
-    <style media="screen">
-      @import url('https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Righteous&family=Roboto&family=Ubuntu&display=swap');
-      @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
-      body{
-        padding: 0%;
-        margin:0%;
-         font-family: "Montserrat";
-      }
-      .navbar{
-        background-color: black;
-        background-attachment:fixed;
-      }
-      .navbar-brand{
-        font-size: 35px;
-        color:lightcoral !important;
-      }
-      .nav-link{
-        font-size:20px;
-        margin-right: 30px;
-        color:white !important;
-      }
-      .nav-link:hover{
-        color:#89CFF0 !important ;
-      }
-      .active .nav-link{
-        color:#89CFF0 !important;
-      }
-      .dropdown:hover .dropdown-menu {
-          display: block;
-          margin-top: 0; // remove the gap so it doesn't close
-       }
-       .col-12{
-         margin-top:10%;
-       }
-        .form1{
-          margin-top:8%;
+      <style media="screen">
+        @import url('https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Righteous&family=Roboto&family=Ubuntu&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
+        body{
+          font-family: 'montserrat' sans-serif;
         }
-        .form-group{
-          margin-bottom:3%;
+        .nav-link{
+          font-size:20px;
+          margin-right: 20px;
+        }
+        .nav-link:hover{
+          color:#89CFF0 !important ;
+        }
+        .dropdown-menu .dropdown-item:hover{
+          color: #89CFF0 !important;
+        }
+         .dropdown-menu .active1{
+          color: #89CFF0 !important;
+        }
+        .active .nav-link{
+          color:#89CFF0 !important;
+        }
+        .emp{
+          color:gray;
+          font-size: 40px;
+          right: 0;
+        }
+        .emp:hover{
+          color:#89CFF0 !important;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; // remove the gap so it doesn't close
+         }
+         .header{
+           position: relative;
+           width: 100%;
+         }
+         .header-inner{
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           z-index: 99;
+           background-color: transparent;
+         }
+         .logo{
+           width: 40%;
+           border-width: 20px;
+           color: #ffffff;
+         }
+         .nav-item .nav-link{
+           display: block;
+           line-height: 36px;
+           text-transform: capitalize;
+           font-size: 16px;
+           font-weight: 500;
+           color: #ffffff;
+           transition: 0.15s;
+         }
+         .nav-item .nav-link:hover{
+           color: #FE4066;
+         }
+         .navbar-scroll{
+           background-color: #ffffff;
+           padding: 0;
+           position: fixed;
+           top: 0;
+           z-index:99;
+           box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+           transition-duration: 0.6s;
+         }
+         .navbar-scroll .nav-item .nav-link{
+           color: black;
+         }
+         .navbar-scroll .header-btn{
+           color: #ffffff;
+           background-color: #fe4066;
+         }
+         .navbar-scroll .logo{
+           color: #000;
+           font-weight: 500;
+         }
+         .head{
+           padding-top:0.4rem;
+           padding-left:0.9rem;
+         }
+        @media only screen and (min-width:1200){
+          .nav-item > .nav-link{
+            padding: 5px 20px !important;
+            display: block !important;
           }
-          .btn{
-            width:200px;
-            margin-top:2%;
-            border-radius:10px;
+        }
+        @media only screen and (max-width:992px){
+          .header-inner{
+            background-color: white !important;
             }
-            .head1{
-              margin-top:5%;
+            .nav-item > .nav-link{
+              color: black !important;
             }
-            p{
-              font-size:25px;
+            .logo{
+              color: #000 !important;
+              font-weight: 600!important;
             }
-    </style>
+
+        }
+        /*section*/
+       section{
+          background:url("/img/login.jpg") no-repeat center fixed;
+          background-size: cover;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          display: flex;
+          position:relative;
+          display: flex;
+          padding:150px 100px 100px;
+          font-family: "georgian",sans-serif;
+          opacity: 1;
+          width: 100%;
+        }
+      /*  .site-content{
+         background-image: url("img/thomas-lefebvre-gp8BLyaTaA0-unsplash.jpg");
+         background-attachment: fixed;
+          height:600px;
+          background-size: cover;
+          background-position:center;
+        }*/
+
+        .col-12{
+          margin-top:10%;
+        }
+         .form1{
+           margin-top:8%;
+         }
+         .form-group{
+           margin-bottom:3%;
+           }
+           .btn{
+             width:200px;
+             margin-top:2%;
+             border-radius:10px;
+             }
+             .head1{
+               margin-top:5%;
+             }
+             p{
+               font-size:25px;
+             }
+        /*footer*/
+        footer{
+          bottom: 0px;
+          width: 100%;
+          background: #111;
+          color: #d9d9d9;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+        .main-content{
+          display: flex;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+        .main-content .box{
+          flex-basis: 50%;
+          padding: 40px 20px;
+        }
+        .box h2{
+          font-size: 1.125rem;
+          font-weight: 600;
+          /*text-transform: uppercase;*/
+        }
+        .left{
+          margin-left: 20px;
+        }
+        .left p{
+          font-size: 15px;
+        }
+        .box .content{
+          margin: 20px 0 0 0;
+          position: relative;
+        }
+        .box .content:before{
+          position: absolute;
+          content: '';
+          top: -10px;
+          height: 2px;
+          width: 100%;
+         background: #1a1a1a;
+        }
+        .box .content:after{
+          position: absolute;
+          content: '';
+          height: 2px;
+        /*  width: 15%;*/
+          background: #f12020;
+          top: -10px;
+        }
+
+        .left .content .social{
+          margin: 20px 0 0 0;
+
+        }
+        .left .content .social a{
+          padding: 0 2px;
+            color: white;
+        }
+        .left .content .social a span{
+          height: 40px;
+          width: 40px;
+          background: #1a1a1a;
+          line-height: 40px;
+          text-align: center;
+          font-size: 18px;
+          border-radius: 5px;
+          transition: 0.3s;
+        }
+        .left .content .social a span:hover{
+          background: #89CFF0;
+            color: gray;
+        }
+        .center{
+          margin-left: 80px;
+        }
+        .center .content .fas{
+          font-size: 1.4375rem;
+          background: #1a1a1a;
+          height: 45px;
+          width: 45px;
+          line-height: 45px;
+          text-align: center;
+          border-radius: 50%;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+        .center .content .fas:hover{
+          background: #89CFF0;
+          color: gray;
+        }
+        .center .content .text{
+          font-size:15px;/* 1.0625rem;*/
+          font-weight: 500;
+          padding-left: 10px;
+        }
+        .center .content .phone{
+          margin: 15px 0;
+        }
+        .right h2{
+            margin-left: 40px;
+        }
+        .right .content{
+          margin-left: 45px;
+        }
+        .right .content .link{
+          text-decoration: none;
+            color: white;
+        }
+        .right .content .link:hover{
+          text-decoration: none;
+          color: #89CFF0;
+        }
+        @media screen and (max-width: 900px) {
+          footer{
+            position: relative;
+            bottom: 0px;
+          }
+          .main-content{
+            flex-wrap: wrap;
+            flex-direction: column;
+          }
+          .main-content .box{
+            margin: 5px 0;
+          }
+        }
+
+      </style>
   </head>
   <body>
-    <header>
-         <div class="header-inner">
-      <nav class="navbar navbar-expand-md fixed-top navbar-dark"><!--navbar-dark -->
-         <a href="index.html" class="navbar-brand ml-3"><img src="../images/output-onlinepngtools.png" class="logo" alt="" style="width:130px;height:75px;float:left;"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-         <div class="collapse navbar-collapse"></div>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="work-report.html">Work Report</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="candidate-info.html">Candidate Info</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button" data-toggle="dropdown">Vendor Info</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item" href="benchsales.html">Bench Sales</a>
-                 <a class="dropdown-item" href="recruiters.html">Recruiters</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Logout</a>
-            </li>
-           </ul>
-            </div>
-           </nav>
+    <header class="header">
+      <div class="header-inner">
+        <div class="container-fluid ">
+          <nav class="navbar navbar-expand-lg my-navbar">
+          <div class="container">
+           <a class="navbar-brand" href="index.html">
+            <img src="img/logo.jpeg" class="image-fluid" alt="" style="width:100px; margin:-3px 0px 0px 0px;height:75px;float:left;">
+           </a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"><i class="fas fa-bars" style:"margin:5px 0px 0px 0px;"></i></span>
+           </button>
+           <div class="collapse navbar-collapse"></div>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto">
+       <li class="nav-item">
+         <a class="nav-link" href="clients.html">Work report</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="contactus.html">Candidate info</a>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Vendor info
+         </a>
+         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <li><a class="dropdown-item" href="employee.html">Benchsales</a></li>
+           <li><a class="dropdown-item" href="vendor.html">Recruiters</a></li>
+         </ul>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="">  <h5 class="head">Hello <%= user.username %><br> </h5></a>
+       </li>
+        </ul>
+
+        <a class="btn btn-danger px-4" href="/logout">Logout</a>
+
+   </div>
+ </div>
+ </nav>
+ </div>
+ </div>
+ </header>
+  <main>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Date Day Time</p>
+            <hr>
+          </div>
         </div>
-    </header>
-<!--section-->
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <p>Date Day Time</p>
-        <hr>
       </div>
-    </div>
-  </div>
-</section>
-<section class="form-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="head1 text-center">Submit the details</h1>
-        <form class="form1" action="index.html" method="post">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <select class="form-control" name="" id="">
-                <option selected>Candidate</option>
-                <option></option>
-              </select>
-            </div>
-            <div class="form-group col-md-6">
-              <input type="text" class="form-control" required="required" placeholder="Job Title " name="" value="">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="text" class="form-control" required="required" placeholder="Location " name="" value="">
-            </div>
-          <div class="form-group col-md-6">
-              <input type="text" class="form-control" required="required" placeholder="Vendor" name="" value="">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="email" class="form-control" required="required" placeholder="Mail-id " name="" value="">
-            </div>
-          <div class="form-group col-md-6">
-              <input type="number" class="form-control" required="required" placeholder="Phone" name="" value="">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="text" class="form-control" required="required" placeholder="Client " name="" value="">
-            </div>
-            <div class="form-group col-md-6">
-              <input type="number" class="form-control" required="required" placeholder="Pay Rate" name="" value="">
-            </div>
-          </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <textarea class="form-control" required="required" placeholder="Remarks" rows="3"></textarea>
+    </section>
+    <section class="form-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="head1 text-center">Submit the details</h1>
+            <form class="form1" action="index.html" method="post">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <select class="form-control" name="" id="">
+                    <option selected>Candidate</option>
+                    <option></option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" required="required" placeholder="Job Title " name="" value="">
+                </div>
               </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" required="required" placeholder="Location " name="" value="">
+                </div>
+              <div class="form-group col-md-6">
+                  <input type="text" class="form-control" required="required" placeholder="Vendor" name="" value="">
+                </div>
               </div>
-          <div class="form-row">
-            <div class="form-group col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" required="required" placeholder="Mail-id " name="" value="">
+                </div>
+              <div class="form-group col-md-6">
+                  <input type="number" class="form-control" required="required" placeholder="Phone" name="" value="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" required="required" placeholder="Client " name="" value="">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="number" class="form-control" required="required" placeholder="Pay Rate" name="" value="">
+                </div>
+              </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <textarea class="form-control" required="required" placeholder="Remarks" rows="3"></textarea>
+                  </div>
+                  </div>
+              <div class="form-row">
+                <div class="form-group col-md-12 text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+
+            </form>
           </div>
 
-        </form>
+        </div>
       </div>
 
-    </div>
-  </div>
+    </section>
 
-</section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+              <hr>
+            <p>If you are working by appling jobs for candidates on job portal please mention your work here.</p>
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-          <hr>
-        <p>If you are working by appling jobs for candidates on job portal please mention your work here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="form-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="head1 text-center">Submit the details</h1>
+            <form class="form1" action="index.html" method="post">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <select class="form-control" name="" id="">
+                    <option selected>Candidate</option>
+                    <option></option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" required="required" placeholder="Job Title " name="" value="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" required="required" placeholder="Job Portal " name="" value="">
+                </div>
+              <div class="form-group col-md-6">
+                  <input type="text" class="form-control" required="required" placeholder="Application number" name="" value="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" placeholder="Mail-id " name="" value="">
+                </div>
+              <div class="form-group col-md-6">
+                  <input type="number" class="form-control" placeholder="Phone" name="" value="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="text" class="form-control" required="required" placeholder="Client " name="" value="">
+                </div>
+                </div>
+              <div class="form-row">
+                <div class="form-group col-md-12 text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+<!--footer-->
+
+<footer>
+<div class="main-content">
+  <div class="left box">
+    <h2>Fifo Solutions</h2>
+  <div class="content">
+    <p>Our journey started in the year 2019 through our parent entity providing management consultancy services. The need for a separate platform
+      for delivering corporate services was inevitable, and profound business services was established.</p>
+    <div class="social">
+      <a href="https://www.google.com/search?q=facebook+login&rlz=1C1CHBF_enIN856IN857&oq=facebook&aqs=chrome.2.69i60j69i57j0i131i433l2j0i433l2j69i60l2.12112j0j4&sourceid=chrome&ie=UTF-8"><span class="fab fa-facebook-f"></span></a>
+      <a href="https://www.google.com/search?q=twitter+login&rlz=1C1CHBF_enIN856IN857&oq=twitter&aqs=chrome.2.69i60j69i57j0i20i263i433j0i67i131i433j69i60l4.4649j0j7&sourceid=chrome&ie=UTF-8"><span class="fab fa-twitter"></span></a>
+      <a href="https://www.google.com/search?q=instagram+login&rlz=1C1CHBF_enIN856IN857&oq=instagram&aqs=chrome.0.35i39j69i57j0i131i433j0i433l2j0i131i433j0i433j5.3209j0j7&sourceid=chrome&ie=UTF-8"><span class="fab fa-instagram"></span></a>
 
       </div>
     </div>
   </div>
-</section>
-<section class="form-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="head1 text-center">Submit the details</h1>
-        <form class="form1" action="index.html" method="post">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <select class="form-control" name="" id="">
-                <option selected>Candidate</option>
-                <option></option>
-              </select>
-            </div>
-            <div class="form-group col-md-6">
-              <input type="text" class="form-control" required="required" placeholder="Job Title " name="" value="">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="text" class="form-control" required="required" placeholder="Job Portal " name="" value="">
-            </div>
-          <div class="form-group col-md-6">
-              <input type="text" class="form-control" required="required" placeholder="Application number" name="" value="">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="email" class="form-control" placeholder="Mail-id " name="" value="">
-            </div>
-          <div class="form-group col-md-6">
-              <input type="number" class="form-control" placeholder="Phone" name="" value="">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <input type="text" class="form-control" required="required" placeholder="Client " name="" value="">
-            </div>
-            </div>
-          <div class="form-row">
-            <div class="form-group col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </div>
-
-        </form>
+  <div class="center box">
+    <h2>Address</h2>
+    <div class="content">
+      <div class="place">
+        <span class="fas fa-map-marker-alt"></span>
+        <span class="text">D.no 50-50-39,TPT colony<br>Seethamadara,Vizag, AP, India.</span>
       </div>
-
+      <div class="phone">
+        <span class="fas fa-phone-alt"></span>
+        <span class="text">310-742-5987</span>
+      </div>
+      <div class="email">
+        <span class="fas fa-envelope"></span>
+        <span class="text">people@fifosolutions.com</span>
+      </div>
     </div>
   </div>
-
-</section>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-
+  <div class="right box">
+    <h2>Quick links</h2>
+    <div class="content">
+      <a class="link" href="index.html"> Home</a><br>
+      <a class="link" href="company.html">About Us</a><br>
+      <a class="link" href="android.html">Services</a><br>
+      <a class="link" href="meeting.html">Timeline</a><br>
+      <a class="link" href="careers.html">Careers</a><br>
+      <a class="link" href="clients.html">Clients</a><br>
+     <a class="link" href="contactus.html">Contact Us</a><br>
+      </div>
+</div>
+</div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(function(){
+      var navbar= $('.header-inner');
+      $(window).scroll(function(){
+        if($(window).scrollTop() <=40 ){
+          navbar.removeClass('navbar-scroll');
+        }else{
+          navbar.addClass('navbar-scroll');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

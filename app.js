@@ -46,16 +46,23 @@ app.post('/suc',routes);
 app.get('/login', routes);
 app.post('/login', routes);
 app.get('/success', routes);
+app.get('/employeeaccount', routes);
+app.get('/vendoraccount', routes);
+app.get('/benchsalesaccount', routes);
+app.get('/jobseekeraccount', routes);
+app.get('/trainingaccount', routes);
 app.get('/logout', routes);
-
+app.get('/workreport',(req,res) =>{
+  res.render('workreport');
+})
 //app.get('/login', routes1);
 //app.post('/login', routes1);
 //app.get('/success', routes1);
 //app.get('/logout', routes1);
-app.listen(9000,function(){
+app.listen(5000,function(){
   console.log("__dirname: ");
   console.log(path.join(__dirname, 'views'));
-  console.log("listing at 9000");
+  console.log("listing at 5000");
 })
 
 

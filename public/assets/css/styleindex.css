@@ -3,15 +3,13 @@
 body{
   padding: 0%;
   margin:0%;
-  font-family: "Montserrat";
-  /*font-family: 'Lato';*/
+  /*font-family: "Montserrat";*/
+  font-family: 'Lato';
   overflow-x: hidden !important;
 }
-
 .nav-link{
   font-size:20px;
   margin-right: 20px;
-
 }
 .nav-link:hover{
   color:#89CFF0 !important ;
@@ -105,13 +103,49 @@ body{
   color: #000;
   font-weight: 500;
 }
+.navbar-light .navbar-brand {
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+	color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+}
+.navbar-toggler {
+	background: #fff;
+}
+.navbar-nav {
+	text-align: center;
+}
+.nav-link {
+	padding: .2rem 1rem;
+}
+.nav-link.active, .nav-link:focus {
+	color: #fff;
+}
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+
 /*section1*/
+
+
 .carousel-item{
   color: #ffffff;
   /*background-image: url("sebastian-herrmann-O2o1hzDA7iE-unsplash (1).jpg");*/
   /*min-height: 300px;
   height: 600px;*/
-  position: relative;
+ position: relative;
   background-position: center center;
   background: no-repeat center center scroll;
 	-webkit-background-size: cover;
@@ -146,43 +180,11 @@ padding-bottom: 20px;
 	line-height: 1.9;
   margin-bottom: 90px;
 }
-.navbar-light .navbar-brand {
-	color: #fff;
-	font-size: 25px;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 2px;
-}
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-	color: #fff;
-}
-.navbar-light .navbar-nav .nav-link {
-	color: #fff;
-}
-.navbar-toggler {
-	background: #fff;
-}
-.navbar-nav {
-	text-align: center;
-}
-.nav-link {
-	padding: .2rem 1rem;
-}
-.nav-link.active, .nav-link:focus {
-	color: #fff;
-}
-.navbar-toggler {
-	padding: 1px 5px;
-	font-size: 18px;
-	line-height: 0.3;
-}
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-	color: #fff;
-}
-@media only screen and (max-width: 767px) {
+
+/*@media only screen and (max-width: 767px) {
 
 	.navbar-collapse {
-		/*background: rgba(0, 0, 0, 0.5);*/
+		background: rgba(0, 0, 0, 0.5);
 	}
 	.carousel-caption {
 		padding-bottom: 40px;
@@ -193,7 +195,9 @@ padding-bottom: 20px;
 	.carousel-caption p {
 		font-size: 13px;
 	}
-}
+}*/
+
+
 /*section2*/
 .testimonials{
   margin: 50px auto;
@@ -218,6 +222,7 @@ padding-bottom: 20px;
 }
 .col-md-4{
   margin: 40px auto;
+  font-family: 'Lato';
 
 }
 .col-md-4:hover{
@@ -260,6 +265,9 @@ p{
   font-size: 16px;
   line-height: 30px;
 }
+.profile h3{
+  font-family: 'Lato';
+}
 .profile:hover{
 /*  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);*/
   cursor: pointer;
@@ -272,14 +280,14 @@ p{
 .profile .icon2{
   color:skyblue;
 }
+
 /*section3*/
-
-
 .proud{
   background-image: url('/img/jeshoots-com-pUAM5hPaCRI-unsplash.jpg');
    background-attachment: fixed;
    background-size: cover;
    background-position: center center;
+   font-family: 'Lato';
    height: 320px;
  }
 .text{
@@ -289,9 +297,11 @@ p{
   margin-top: 40px;
   padding-bottom: 20px;
 }
+
 /*section4*/
 #services{
   margin-top: 7%;
+  font-family: 'Lato';
 }
 #services h3{
   color:#211b6b;
@@ -304,6 +314,7 @@ p{
   color:#cd6b35;
   text-align: center;
 }
+
 /*section5*/
 #section5
 {
@@ -360,6 +371,7 @@ h3
   font-size: 18px;
   text-transform: uppercase;
 }
+
 /*section6*/
 .section-6{
   background-image: url('/img/pexels-rodolfo-clix-1036936.jpg');
@@ -370,12 +382,12 @@ h3
   margin-top: 20%;
   margin-left: 5%;
   margin-bottom: 4%;
-  font-family: 'Righteous';
+  
   width: 100%;
   color: whitesmoke;
   text-align: center;
 }
-.section-6 .para{
+.section-6 .para1{
   width: 100%;
   font-family: 'Ubuntu';
   color: whitesmoke;
@@ -419,6 +431,7 @@ footer{
 }
 .left p{
   font-size: 15px;
+  word-spacing: 1px;;
 }
 .box .content1{
   margin: 20px 0 0 0;
@@ -440,9 +453,7 @@ footer{
   background: #f12020;
   top: -10px;
 }
-.left .content1 p{
-  text-align: justify;
-}
+
 .left .content1 .social{
   margin: 20px 0 0 0;
 
@@ -520,9 +531,9 @@ footer{
 }
 
 
+/*media quires*/
 
-
-@media only screen and (min-width: 900px) {
+/*@media only screen and (min-width: 900px) {
   .section-6 .container-fluid{
     background-image: url('../asserts/images/pexels-rodolfo-clix-1036936.jpg');
     background-size: cover;
@@ -550,7 +561,7 @@ footer{
   }
 	.text-dark{
 	  font-size: 17px;
-	 /* margin-left: 500px;*/
+
 	}
   .profile h3{
     font-size: 30px;
@@ -593,4 +604,298 @@ footer{
 	.text-dark{
 	  font-size: 11px;
 	}
+}*/
+
+/*desktops and laptops*/
+@media(min-width: 1024px){
+
+  .carousel-item{
+    min-height: 100px;
+    height: auto;
+  }
+  .carousel-item img{
+    height: 40rem;
+  }
+  .carousel-caption {
+  	bottom: 7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+  }
+  .testimonials{
+    margin: 4rem auto;
+  }
+  .testimonials h1{
+    font-size: 1.7rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    }
+
+   .para{
+     font-size: 1.1rem;
+     line-height: 1.7rem;
+     padding: 0 0.4rem;
+       margin-left: 16rem;
+       margin-right: 10rem;
+   }
+   p{
+     font-size: 1.1rem;
+     line-height: 1.7rem;
+     padding: 0 0.4rem;
+   }
+   .profile{
+     padding: 4rem 1rem 1rem;
+     background-color: #efefef;
+   }
+   .profile .img{
+     border:0.3rem solid white;
+     font-size:2.6rem;
+     padding-top: 2rem;
+   }
+  .profile h3{
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: black;
+    font-weight: bold;
+  }
+  #services h3{
+    color:#211b6b;
+    padding-bottom: 22px;
+    font-size: 1.6rem;
+  }
+
+  .text{
+    font-size:1.6rem;
+    text-align: right;
+    margin-left: 24rem !important;
+  }
+  .text-dark{
+    font-size: 17px;
+      margin-left: 27rem !important;
+  }
+
+  .section-6 .heading-1{
+    margin-left: 4%;
+    }
+
+  .section-6 .btn{
+    margin-bottom: 15%;
+    width:20%;
+    margin-left: 40%;
+    padding: 2% 5%;
+    color: white;
+    background-color: skyblue;
+  }
+
+
+}
+/*tablets and ipads*/
+@media(min-width:768px) and (max-width:1023px){
+
+    .carousel-item{
+      min-height: 100px;
+      height: auto;
+    }
+    .carousel-item img{
+      height: 30rem;
+    }
+    .carousel-caption {
+    	bottom: 3rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.7px;
+    }
+
+  .testimonials{
+    margin: 4rem auto;
+  }
+  .testimonials h1{
+    text-align: left;
+    font-size: 1.9rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  .testimonials h1::after{
+    display: none;
+   }
+   p{
+     font-size: 1.1rem;
+     line-height: 1.7rem;
+     padding: 0 0.4rem;
+   }
+   .profile{
+     padding: 4rem 1rem 1rem;
+     background-color: #efefef;
+   }
+  .profile .img{
+       top:-60px;
+       left: 4rem;
+       border:0.3rem solid white;
+       font-size:2.9rem;
+       padding-top: 2rem;
+   }
+  .profile h3{
+    font-size: 1.4rem;
+    margin-top: 15px;
+    color: black;
+    font-weight: bold;
+  }
+
+
+
+  .proud{
+   height: 300px;
+   }
+  .text{
+    color: black;
+    font-size: 1.7rem;
+    margin-top:1rem;
+    padding-bottom:1rem;
+  }
+  .text-dark{
+    font-size:1rem;
+  }
+  #section5
+  {
+    height:40vh;
+  }
+ .matter
+  {
+    padding: 0.1rem;
+  }
+  .icon
+  {
+    font-size:3.5rem;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .counter
+  {
+    font-size: 2.2rem;
+    margin: 10px 0;
+  }
+  h3
+  {
+    font-size:1.2rem;
+  }
+  .section-6 .heading-1{
+    margin-top: 20%;
+    font-size: 1.8rem;
+  }
+  .section-6 .para{
+    font-size: 1.0rem;
+  }
+  .section-6 .btn{
+    margin-bottom: 15%;
+    width:40%;
+    margin-right:50%;
+    background-color: skyblue;
+  }
+}
+/*mobile phones*/
+@media(max-width:767px){
+  .carousel-item{
+    min-height: 100px;
+    height: auto;
+  }
+  .carousel-item img{
+    height: 20rem;
+  }
+  .carousel-caption {
+    bottom: 1rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+  }
+  .carousel-caption h4{
+      font-size: 0.7rem;
+  }
+
+  .testimonials{
+    margin: 4rem auto;
+  }
+  .testimonials h1{
+    text-align: left;
+    font-size: 1.7rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  .testimonials h1::after{
+    display: none;
+   }
+   p{
+     font-size: 1.1rem;
+     line-height: 1.7rem;
+     padding: 0 0.4rem;
+   }
+   .profile{
+     padding: 4rem 1rem 1rem;
+     background-color: #efefef;
+   }
+   .profile .img{
+     border:0.3rem solid white;
+     font-size:2.6rem;
+     padding-top: 2rem;
+   }
+  .profile h3{
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: black;
+    font-weight: bold;
+  }
+
+
+
+  .proud{
+   height: 300px;
+   }
+  .text{
+    color: black;
+    font-size: 1.3rem;
+    margin-top:1rem;
+    padding-bottom:1rem;
+    text-align: right;
+  }
+  .text-dark{
+    font-size:0.7rem;
+  }
+  #section5
+  {
+    height:50vh;
+  }
+ .matter
+  {
+    padding: 0.1rem;
+  }
+  .icon
+  {
+    font-size:2.5rem;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .counter
+  {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  h3
+  {
+    font-size:0.2rem;
+  }
+  .section-6 .heading-1{
+    margin-top: 20%;
+    font-size: 1.4rem;
+  }
+  .section-6 .para{
+    font-size: 0.9rem;
+  }
+  .section-6 .btn{
+    margin-bottom: 15%;
+    width:60%;
+    margin-right:50%;
+    background-color: skyblue;
+  }
 }
