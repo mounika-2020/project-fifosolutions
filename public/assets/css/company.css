@@ -441,7 +441,6 @@ align-items: center;
 }
 .box .back-face p{
   margin-top: 1rem;
-  text-align: justify;
 }
 .box:hover .back-face{
   opacity: 1;

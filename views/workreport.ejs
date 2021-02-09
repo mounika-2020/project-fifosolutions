@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fifo bench sales page</title>
+    <title>Fifo workreport</title>
       <link rel="icon" href="img/favicon.ico">
       <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -124,6 +124,7 @@
        section{
           background:url("/img/login.jpg") no-repeat center fixed;
           background-size: cover;
+          background-color: gray;
           align-items: center;
           justify-content: center;
           min-height: 100vh;
@@ -161,6 +162,58 @@
         .flex-column{
           color:black;
         }
+
+      /*  section{
+           background:url("/img/login.jpg") no-repeat center fixed;
+           background-size: cover;
+           align-items: center;
+           justify-content: center;
+           min-height: 100vh;
+           display: flex;
+           position:relative;
+           display: flex;
+           padding:150px 100px 100px;
+           font-family: "georgian",sans-serif;
+           opacity: 1;
+           width: 100%;
+         }*/
+       /*  .site-content{
+          background-image: url("img/thomas-lefebvre-gp8BLyaTaA0-unsplash.jpg");
+          background-attachment: fixed;
+           height:600px;
+           background-size: cover;
+           background-position:center;
+         }*/
+         .date{
+           margin-bottom: 2rem;
+         }
+         hr{
+           margin-bottom: 18rem;
+         }
+         .col-12{
+           margin-top:1%;
+         }
+          .form1{
+             margin-top: 8%;
+          }
+          .form-group{
+            margin-bottom:3%;
+            }
+            .btn{
+              width:200px;
+              margin-top:2%;
+              border-radius:10px;
+              }
+              .head1{
+                color: white;
+              }
+              p{
+                font-size:25px;
+                color: white;
+              }
+              .form-section{
+                margin-bottom: 0;
+              }
         /*footer*/
         footer{
           bottom: 0px;
@@ -304,23 +357,23 @@
            <div class="collapse navbar-collapse"></div>
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/workreport">Work report</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/candidateinfo">Candidate info</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Vendor info
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/benchsalesinfo">Benchsales</a></li>
+                    <li><a class="dropdown-item" href="/recruiters">Recruiters</a></li>
+                  </ul>
+                </li>
        <li class="nav-item">
-         <a class="nav-link" href="clients.html">Work report</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" href="contactus.html">Candidate info</a>
-       </li>
-       <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Vendor info
-         </a>
-         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <li><a class="dropdown-item" href="employee.html">Benchsales</a></li>
-           <li><a class="dropdown-item" href="vendor.html">Recruiters</a></li>
-         </ul>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" href="">  <h5 class="head">Hello <%= user.username %><br> </h5></a>
+         <a class="nav-link" href="">  <h5 class="head">Hello </h5></a>
        </li>
         </ul>
 
@@ -333,19 +386,168 @@
  </div>
  </header>
   <main>
-  <section>
+  <!--<section>
     <div class="container-fluid p-0">
       <div class="site-content">
         <div class="d-flex justify-content-center">
           <div class="d-flex flex-column">
-            <h1 class="site-title text-white">Welcome to your account <%= user.username %></h1>
+            <h1 class="site-title text-white">Welcome to your account</h1>
               </div>
 
         </div>
 
       </div>
    </div>
+ </section>-->
+<!-- <section>
+   <div class="container">
+     <div class="row">
+       <div class="col-12">
+         <p class="date">Date Day Time</p>
+
+       </div>
+     </div>
+   </div>
+ </section>-->
+ <section class="form-section">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <button type="button" onclick="document.getElementById('display').innerHTML=Date()">Date and Time</button>
+          <p id="display"></p>
+         <h1 class="head1 text-center">Submit the details</h1>
+         <form class="form1" action="/workreport1" method="POST" name="google-sheet">
+           <div class="form-row">
+             <div class="form-group col-md-6">
+               <select class="form-control" name="Candidate" id="" >
+                 <option selected>Candidate</option>
+                 <option></option>
+               </select>
+             </div>
+             <div class="form-group col-md-6">
+               <input type="text" class="form-control" required="required" placeholder="Job Title " name="jobtitle" value="">
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="form-group col-md-6">
+               <input type="text" class="form-control" required="required" placeholder="Location " name="location" value="">
+             </div>
+           <div class="form-group col-md-6">
+               <input type="text" class="form-control" required="required" placeholder="Vendor" name="vendor" value="">
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="form-group col-md-6">
+               <input type="email" class="form-control" required="required" placeholder="Mail-id " name="email" value="">
+             </div>
+           <div class="form-group col-md-6">
+               <input type="number" class="form-control" required="required" placeholder="Phone" name="phone" value="">
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="form-group col-md-6">
+               <input type="text" class="form-control" required="required" placeholder="Client " name="client" value="">
+             </div>
+             <div class="form-group col-md-6">
+               <input type="number" class="form-control" required="required" placeholder="Pay Rate" name="payrate" value="">
+             </div>
+           </div>
+
+             <div class="form-row">
+               <div class="form-group col-md-12">
+                 <textarea class="form-control" required="required" namt="text" placeholder="Remarks" rows="3"></textarea>
+               </div>
+               </div>
+           <div class="form-row">
+             <div class="form-group col-md-12 text-center">
+               <input type="submit" class="btn btn-primary">Submit</input>
+             </div>
+           </div>
+
+         </form>
+       </div>
+
+     </div>
+   </div>
+   <hr>
+   <script>
+           const scriptURL = 'https://script.google.com/macros/s/AKfycbzNH_sxojFnw8QhNYg7pnjHH1XozDZnSGvj8Ur9ywFzhd1VUtMXARbE/exec'
+           const form = document.forms['google-sheet']
+
+           form.addEventListener('submit', e => {
+             e.preventDefault()
+             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+               .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+               .catch(error => console.error('Error!', error.message))
+           })
+         </script>
  </section>
+
+<!-- <section>
+   <div class="container">
+     <div class="row">
+       <div class="col-12">
+           <hr>
+         <p>If you are working by appling jobs for candidates on job portal please mention your work here.</p>
+
+       </div>
+     </div>
+   </div>
+ </section>-->
+ <section class="form-section">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+            <p class="para">If you are working by appling jobs for candidates on job portal please mention your work here.</p>
+         <h1 class="head1 text-center">Submit the details</h1>
+         <form class="form1" action="/workreport2" method="POST">
+           <div class="form-row">
+             <div class="form-group col-md-6">
+               <select class="form-control" name="Candidate" id="">
+                 <option selected>Candidate</option>
+                 <option></option>
+               </select>
+             </div>
+             <div class="form-group col-md-6">
+               <input type="text" class="form-control" required="required" placeholder="Job Title " name="jobtitle" value="">
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="form-group col-md-6">
+               <input type="text" class="form-control" required="required" placeholder="Job Portal " name="jobportal" value="">
+             </div>
+           <div class="form-group col-md-6">
+               <input type="text" class="form-control" required="required" placeholder="Application number" name="application" value="">
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="form-group col-md-6">
+               <input type="email" class="form-control" placeholder="Mail-id " name="email" value="">
+             </div>
+           <div class="form-group col-md-6">
+               <input type="number" class="form-control" placeholder="Phone" name="phone" value="">
+             </div>
+           </div>
+           <div class="form-row">
+             <div class="form-group col-md-12">
+               <input type="text" class="form-control" required="required" placeholder="Client " name="client" value="">
+             </div>
+             </div>
+           <div class="form-row">
+             <div class="form-group col-md-12 text-center">
+               <button type="submit" class="btn btn-primary">Submit</button>
+             </div>
+           </div>
+
+         </form>
+       </div>
+
+     </div>
+   </div>
+
+ </section>
+
+
 
 <!--footer-->
 

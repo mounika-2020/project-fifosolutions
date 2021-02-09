@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fifo employee</title>
+    <title>Fifo candidateinfo</title>
       <link rel="icon" href="img/favicon.ico">
       <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -96,6 +97,10 @@
            color: #000;
            font-weight: 500;
          }
+         .head{
+           padding-top:0.4rem;
+           padding-left:0.9rem;
+         }
         @media only screen and (min-width:1200){
           .nav-item > .nav-link{
             padding: 5px 20px !important;
@@ -116,12 +121,13 @@
 
         }
         /*section*/
-        section{
-          background:url("img/login.jpg") no-repeat center fixed;
+       section{
+          background:url("/img/login.jpg") no-repeat center fixed;
           background-size: cover;
+          background-color: gray;
           align-items: center;
           justify-content: center;
-          min-height: 130vh;
+          min-height: 100vh;
           display: flex;
           position:relative;
           display: flex;
@@ -130,66 +136,84 @@
           opacity: 1;
           width: 100%;
         }
-        .wrapper{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%,-50%);
-          max-width: 450px;
-          width: 100%;
-          background: #fff;
-          padding: 25px;
-          border-radius: 5px;
-          /*box-shadow: 4px 4px 2px rgba(254,236,164,1);*/
+      /*  .site-content{
+         background-image: url("img/thomas-lefebvre-gp8BLyaTaA0-unsplash.jpg");
+         background-attachment: fixed;
+          height:600px;
+          background-size: cover;
+          background-position:center;
+        }*/
+        .site-title, .site-desc{
+         color:black;
+        }
+        .site-title{
+          margin-top: 1rem;
+          margin-bottom: 3%;
+          font-size: 40px;
+          color:#4CBB17;
+        }
+        .site-title1{
+          margin-top: 0.1rem;
+          margin-bottom: 6%;
+          margin-left: 5rem;
+          font-size: 40px;
+          color:#4CBB17;
+        }
+        .flex-column{
+          color:black;
         }
 
-        .wrapper h2{
-          text-align: center;
-          margin-bottom: 20px;
-          /*text-transform: uppercase;*/
-          letter-spacing: 2px;
-          color: #332902;
-        }
-
-        .wrapper .input_field{
-          margin-bottom: 10px;
-        }
-
-        .wrapper .input_field input[type="text"],
-        .wrapper textarea{
-          border: 1px solid #e0e0e0;
-          width: 100%;
-          padding: 10px;
-        }
-        a:hover{
-          color:green;
-          text-decoration: none;
-        }
-        .wrapper .btn input[type="submit"]{
-          border: 0px;
-          margin-top: 15px;
-          padding: 10px;
-          text-align: center;
-          width: 190%;
-          background: #3fb0ac;/* #fece0c;*/
-          color:white;/* #332902;*/
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          font-weight: bold;
-          /*border-radius: 25px;*/
-          cursor: pointer;
-          margin-left: 90%;
-        }
-
-        #error_message{
-          margin-bottom: 20px;
-          background: #fe8b8e;
-          padding: 0px;
-          text-align: center;
-          font-size: 14px;
-          transition: all 0.5s ease;
-        }
-
+      /*  section{
+           background:url("/img/login.jpg") no-repeat center fixed;
+           background-size: cover;
+           align-items: center;
+           justify-content: center;
+           min-height: 100vh;
+           display: flex;
+           position:relative;
+           display: flex;
+           padding:150px 100px 100px;
+           font-family: "georgian",sans-serif;
+           opacity: 1;
+           width: 100%;
+         }*/
+       /*  .site-content{
+          background-image: url("img/thomas-lefebvre-gp8BLyaTaA0-unsplash.jpg");
+          background-attachment: fixed;
+           height:600px;
+           background-size: cover;
+           background-position:center;
+         }*/
+         .date{
+           margin-bottom: 2rem;
+         }
+         hr{
+           margin-bottom: 18rem;
+         }
+         .col-12{
+           margin-top:1%;
+         }
+          .form1{
+             margin-top: 8%;
+          }
+          .form-group{
+            margin-bottom:3%;
+            }
+            .btn{
+              width:200px;
+              margin-top:2%;
+              border-radius:10px;
+              }
+              .head1{
+                color: white;
+              }
+              p{
+                font-size:25px;
+                color: white;
+              }
+              .form-section{
+                margin-bottom: 0;
+              }
         /*footer*/
         footer{
           bottom: 0px;
@@ -333,195 +357,47 @@
            <div class="collapse navbar-collapse"></div>
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav m-auto">
-               <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="/workreport">Work report</a>
                 </li>
-               <li class="nav-item dropdown">
-                 <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item active1" href="company.html">COMPANY</a></li>
-             <li><a class="dropdown-item" href="business.html">BUSINESS SOLUTIONS</a></li>
-              <li><a class="dropdown-item" href="negotiable.html">NEGOTIABLE</a></li>
-             <li><a class="dropdown-item" href="platforms.html">PLATFORMS</a></li>
-             <li><a class="dropdown-item" href="products.html">PRODUCTS</a></li>
-             <li><a class="dropdown-item" href="teams.html">TEAMS</a></li>
-             <li><a class="dropdown-item" href="technologies.html">TECHNOLOGIES</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Services
-         </a>
-         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <li><a class="dropdown-item" href="android.html">ANDROID APPLICATION</a></li>
-           <li><a class="dropdown-item" href="aws.html">AWS</a></li>
-           <li><a class="dropdown-item" href="delivery.html">DELIVERY</a></li>
-           <li><a class="dropdown-item" href="ecommerce.html">E-COMMERCE</a></li>
-           <li><a class="dropdown-item" href="iosapp.html">IOS APPLICATION</a></li>
-           <li><a class="dropdown-item" href="payment.html">PAYMENT</a></li>
-             <li><a class="dropdown-item" href="sapdev.html">SAP DEELOPMENT</a></li>
-           <li><a class="dropdown-item" href="seo.html">SEO</a></li>
-               <li><a class="dropdown-item" href="webdevelopment.html">WEB DEVELOPMENT</a></li>
-         </ul>
-       </li>
-       <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Timeline
-         </a>
-         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <li><a class="dropdown-item" href="meeting.html">MEETING</a></li>
-           <li><a class="dropdown-item" href="training.html">TRAINING</a></li>
-           <li><a class="dropdown-item" href="marketing.html">MARKETING</a></li>
-           <li><a class="dropdown-item" href="placements.html">PLACEMENT</a></li>
-         </ul>
-       </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/candidateinfo">Candidate info</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Vendor info
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/benchsalesinfo">Benchsales</a></li>
+                    <li><a class="dropdown-item" href="/recruiters">Recruiters</a></li>
+                  </ul>
+                </li>
        <li class="nav-item">
-         <a class="nav-link" href="careers.html">Careers</a>
+         <a class="nav-link" href="">  <h5 class="head">Hello </h5></a>
        </li>
-       <li class="nav-item">
-         <a class="nav-link" href="clients.html">Clients</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" href="contactus.html">Contact us</a>
-       </li>
-       <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           SignUP
-         </a>
-         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <li><a class="dropdown-item" href="employee.html">Employee Signup</a></li>
-           <li><a class="dropdown-item" href="vendor.html">Vendor Signup</a></li>
-           <li><a class="dropdown-item" href="benchsales.html">Benchsales SignUP</a></li>
-           <li><a class="dropdown-item" href="jsreg.html">JobSeeker Signup</a></li>
-           <li><a class="dropdown-item" href="trainingreg.html">Training SignUP</a></li>
-         </ul>
-       </li>
-       <li class="nav-item">
-           <a class="nav-link" href="login.html" target="_blank"><i class="fa fa-user emp"></i></a>
-       </li>
-     </ul>
+        </ul>
+
+        <a class="btn btn-danger px-4" href="/logout">Logout</a>
+
    </div>
  </div>
  </nav>
  </div>
  </div>
  </header>
-  <main>
-  <section>
-    <div class="wrapper">
-      <h2>Employee signup</h2>
-      <% if(typeof err != 'undefined') {%>
-    <div class="alert alert-dismissible alert-danger">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong><%= err %></strong>
-    </div>
-    <% } %>
+ <section>
+ <div class="container-fluid p-0">
+   <div class="site-content">
+     <div class="d-flex justify-content-center">
+       <div class="d-flex flex-column">
+         <h1 class="site-title text-white">Welcome to your account</h1>
+           </div>
 
-      <form id="myform" action="/register/employee" method="POST" autocomplete="off" onsubmit="return validate();">
-        <div class="input_field">
-            <input type="text" placeholder="Full Name" class="form-control" name="username" id="name" value="<%= typeof username != 'undefined' ? username : '' %>">
-        </div>
-        <div class="input_field">
-            <input type="email" placeholder="Email" class="form-control" name="email" id="email" value="<%= typeof email != 'undefined' ? email : '' %>">
-        </div>
-      <!--  <div class="input_field">
-            <input type="text" placeholder="Employer Company name" class="form-control" name="cname" id="cname">
-        </div>-->
-        <div class="input_field">
-            <input type="tel" placeholder="Phone Number" class="form-control" name="phone" id="phone" value="<%= typeof phone != 'undefined' ? phone : '' %>">
-        </div>
-        <div class="input_field">
+     </div>
 
-            <input type="text" placeholder="Password" class="form-control" name="password" id="pass">
-         </div>
-         <div class="input_field">
-
-            <input type="text" placeholder="Confirm password" class="form-control" name="cpass" id="cpass">
-         </div>
-           <p>If already a member? <a href="login.html">Please login.</a></p>
-             <div id="error_message"></div>
-        <div class="btn">
-            <input type="submit" class="form-control">
-        </div>
-      </form>
-    </div>
-    <!-- <script src="../js/benchsalesreg.js"></script>-->
-    <script type="text/javascript">
-      function validate(){
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var cname = document.getElementById("cname").value;
-        var phone = document.getElementById("phone").value;
-
-        var pass = document.getElementById("pass").value;
-        var cpass = document.getElementById("cpass").value;
-          error_message.style.padding = "10px";
-
-        var text;
-        if(name.length < 3){
-          text = "Please Enter valid Name";
-          error_message.innerHTML = text;
-          return false;
-        }
-        /*if(email.indexOf("@") == -1 || email.length < 6){
-          text = "Please Enter valid Email";
-          error_message.innerHTML = text;
-          return false;
-        }*/
-
-        if(email.indexOf('@') <= 0){
-          text = "Please Enter valid Email";
-          error_message.innerHTML = text;
-              return false;
-        }
-        if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
-          text = "Please Enter valid Email";
-          error_message.innerHTML = text;
-            return false;
-        }
-        if((email.charAt(email.length-3)!='c') && (email.charAt(email.length-2)!='c')){
-          text = "Please Enter valid Email";
-          error_message.innerHTML = text;
-            return false;
-        }
-        if(email.charAt(email.length-2)!='o'){
-          text = "Please Enter valid Email";
-          error_message.innerHTML = text;
-            return false;
-        }
-        if(email.charAt(email.length-1)!='m'){
-          text = "Please Enter valid Email";
-          error_message.innerHTML = text;
-            return false;
-        }
-        if(cname.length < 3){
-          text = "Please Enter company name";
-          error_message.innerHTML = text;
-          return false;
-        }
-        if(isNaN(phone) || phone.length != 10){
-          text = "Please Enter valid Phone Number";
-          error_message.innerHTML = text;
-          return false;
-        }
-        if(pass.length < 6){
-          text = "Password must contain atleast 6 digits";
-          error_message.innerHTML = text;
-          return false;
-        }
-        if(cpass.length < 6||cpass!==pass){
-          text = "Please Enter above password";
-          error_message.innerHTML = text;
-          return false;
-        }
-          /*alert(" Successfully!");*/
-        return true;
-      }
-
-    </script>
-  </section>
-</main>
-
+   </div>
+ </div>
+ </section>
 <!--footer-->
 
 <footer>

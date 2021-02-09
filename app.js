@@ -52,9 +52,28 @@ app.get('/benchsalesaccount', routes);
 app.get('/jobseekeraccount', routes);
 app.get('/trainingaccount', routes);
 app.get('/logout', routes);
-app.get('/workreport',(req,res) =>{
+app.get('/workreport1', routes);
+app.get('/workreport',(req,res) => {
   res.render('workreport');
-})
+});
+app.get('/candidateinfo',(req,res) => {
+  res.render('candidateinfo',{user:'hi'});
+});
+app.get('/benchsalesinfo',(req,res) => {
+  res.render('benchsalesinfo');
+});
+app.get('/recruiters',(req,res) => {
+  res.render('recruiters');
+});
+app.get('/classtab',(req,res) => {
+  res.render('classtab');
+});
+app.get('/recordings',(req,res) => {
+  res.render('recordings');
+});
+app.get('/assignments',(req,res) => {
+  res.render('assignments');
+});
 //app.get('/login', routes1);
 //app.post('/login', routes1);
 //app.get('/success', routes1);

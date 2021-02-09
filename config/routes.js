@@ -9,6 +9,7 @@ const benchsalesmodel = require('../models/benchsalesmodel');
 const jobseekermodel = require('../models/jobseekermodel');
 const trainingmodel = require('../models/trainingmodel');
 const contactusmodel = require('../models/contactusmodel');
+const workreport1 = require('../models/workreport1');
 const passport = require('passport');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -393,6 +394,47 @@ routes.post('/contactus', (req, res) => {
         });
     }
 });
+//workreport1
+
+routes.get('/workreport', (req, res) => {
+    res.render('workreport');
+})
+
+routes.post('/workreport1', (req, res) => {
+     var { candidate,jobtitle,location,vendor,email,phone,client,payrate,text} = req.body;
+    var err;
+    if (!candidate || !jobtitle || !location || !vendor || !email || !phone  || !client || !payrate) {
+        err = "Please Fill All The Fields...";
+        res.render('workreport', { 'err': err });
+    }
+    if (typeof err == 'undefined') {
+                        workreport1({candidate,Jobtitle,location,vendor,email,phone,client,payrate,text
+                        }).save((err, data) => {
+                            if (err) throw err;
+
+                            res.redirect('/workreport');
+                        });
+
+    }
+});
+
+routes.post('/workreport2', (req, res) => {
+     var { candidate,jobtitle,jobportal,application,email,phone,client} = req.body;
+    var err;
+    if (!candidate || !jobtitle || !jobportal || !application || !email || !phone  || !client) {
+        err = "Please Fill All The Fields...";
+        res.render('workreport', { 'err': err });
+    }
+    if (typeof err == 'undefined') {
+                        workreport2({candidate,jobtitle,jobportal,application,email,phone,client
+                        }).save((err, data) => {
+                            if (err) throw err;
+
+                            res.redirect('/workreport');
+                        });
+
+    }
+});
 
 // Authentication Strategy
 // ---------------
@@ -438,6 +480,9 @@ routes.post('/login', (req, res, next) => {
 });
 routes.get('/employeeaccount', checkAuthenticated, (req, res) => {
     res.render('employeeaccount', { 'user': req.user });
+});
+routes.get('/workreport', (req, res) => {
+    res.render('/workreport', { 'user': req.user });
 });
 routes.get('/vendoraccount', checkAuthenticated, (req, res) => {
     res.render('vendoraccount', { 'user': req.user });

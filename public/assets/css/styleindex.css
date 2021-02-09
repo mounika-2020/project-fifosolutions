@@ -349,9 +349,9 @@ p{
   text-align: center;
   margin: 0 auto;
 }
-.fa-users
+/*.fa-users
 {
-  color: #ff0000;
+  color:# #ff0000;
 }
 .fa-user-circle
 {
@@ -360,7 +360,7 @@ p{
 .fa-envelope-o
 {
   color:#4267b2;
-}
+}*/
 .counter
 {
   font-size: 45px;
@@ -382,7 +382,7 @@ h3
   margin-top: 20%;
   margin-left: 5%;
   margin-bottom: 4%;
-  
+
   width: 100%;
   color: whitesmoke;
   text-align: center;

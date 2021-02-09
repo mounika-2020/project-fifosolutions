@@ -201,7 +201,11 @@ body{
  margin-bottom: 5%;
 }
 .address p{
-  font-weight:600;
+  font-weight:300;
+}
+.address .contact{
+    font-weight:300;
+
 }
 .s2-para{
   padding-top: 50px;
@@ -210,6 +214,9 @@ body{
 .form1{
   margin-top: 6%;
  margin-bottom: 5%;
+}
+h5{
+  color: blue;
 }
 /*footer*/
 footer{
