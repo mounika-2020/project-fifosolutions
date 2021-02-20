@@ -165,7 +165,7 @@
         footer{
           bottom: 0px;
           width: 100%;
-          background: #111;
+          background-color: #242124;
           color: #d9d9d9;
           box-sizing: border-box;
           font-family: 'Poppins', sans-serif;
@@ -222,7 +222,6 @@
         .left .content .social a span{
           height: 40px;
           width: 40px;
-          background: #1a1a1a;
           line-height: 40px;
           text-align: center;
           font-size: 18px;
@@ -238,7 +237,6 @@
         }
         .center .content .fas{
           font-size: 1.4375rem;
-          background: #1a1a1a;
           height: 45px;
           width: 45px;
           line-height: 45px;
@@ -267,7 +265,7 @@
         }
         .right .content .link{
           text-decoration: none;
-            color: white;
+            color: #d9d9d9;
         }
         .right .content .link:hover{
           text-decoration: none;
@@ -286,7 +284,61 @@
             margin: 5px 0;
           }
         }
+        @media(min-width: 1024px){
+          .mainform{
+            width: 62rem;
+            margin-left: 2rem;
+            margin-top: 8rem;
+            margin-bottom: 6rem;
+          }
+          .btn-md{
+            margin-left: 3rem;
+            width: 7rem;
+          }
+          .label{
+            color: white;
+          }
+          .site-title{
+            font-size: 2rem;
+            margin-left: 16rem;
+          }
+        }
+        @media(min-width:768px) and (max-width:1023px){
+          .mainform{
+            width: 43rem;
+            margin-left: 2rem;
+            margin-top: 6rem;
+            margin-bottom: 6rem;
+          }
+          .btn-md{
+            margin-left: 13rem;
+          }
+          .label{
+            color: white;
+          }
+          .site-title{
+            font-size: 1.3rem;
+            margin-left: 0.2rem;
+          }
+        }
+        @media(max-width:767px){
+          .mainform{
+            width: 17rem;
 
+            margin-top: 3rem;
+            margin-bottom: 6rem;
+          }
+          .btn-md{
+            margin-left: 6rem;
+          }
+          .label{
+            color: white;
+          }
+          .site-title{
+             font-size: 1.3rem;
+             margin-left: 0.2rem;
+          }
+        }
       </style>
   </head>
   <body>
@@ -306,7 +358,7 @@
               <ul class="navbar-nav m-auto">
 
        <li class="nav-item">
-         <a class="nav-link" href="">  <h5 class="head">Hello <%= user.fname %><br> </h5></a>
+         <a class="nav-link" href="">  <h5 class="head">Hello <%= user.username %><br> </h5></a>
        </li>
         </ul>
 
@@ -324,7 +376,78 @@
       <div class="site-content">
         <div class="d-flex justify-content-center">
           <div class="d-flex flex-column">
-            <h1 class="site-title text-white">Welcome to FifoSolutions, <%= user.fname %></h1>
+            <h1 class="site-title text-white">Welcome to FifoSolutions, <%= user.username %></h1>
+            <div>
+             <form class="mainform" action="/benchsalesaccount" method="POST">
+                 <!-- Grid row -->
+                 <div class="form-row">
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputEmail4">Position</label>
+                     <input type="text" class="form-control" name="position" id="inputEmail4" placeholder="position">
+                   </div>
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputPassword4">Client</label>
+                     <input type="text" class="form-control" id="inputPassword4" name="client" placeholder="Client">
+                   </div>
+                 </div>
+                 <div class="form-row">
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputEmail4">Visa</label>
+                     <input type="text" class="form-control" id="inputEmail4" name="visa" placeholder="Visa">
+                   </div>
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputPassword4">Experience</label>
+                     <input type="text" class="form-control" id="inputPassword4" name="experience" placeholder="Experience">
+                   </div>
+                 </div>
+                 <div class="form-row">
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputEmail4">Vendor Company</label>
+                     <input type="text" class="form-control" id="inputEmail4" name="vendor" placeholder="Vendor Company">
+                   </div>
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputPassword4">Enail</label>
+                     <input type="email" class="form-control" id="inputPassword4" name="email" placeholder="Enail">
+                   </div>
+                 </div>
+                 <div class="form-row">
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputEmail4">Phone</label>
+                     <input type="text" class="form-control" id="inputEmail4" name="phone" placeholder="Phone">
+                   </div>
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputPassword4">Location</label>
+                     <input type="text" class="form-control" id="inputPassword4" name="location" placeholder="Location">
+                   </div>
+                 </div>
+                 <div class="form-row">
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputEmail4">Date</label>
+                     <input type="date" class="form-control" id="inputEmail4" name="date" placeholder="Date">
+                   </div>
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputPassword4">Contacted by</label>
+                     <input type="text" class="form-control" id="inputPassword4" name="contacted" placeholder="Contacted by">
+                   </div>
+                 </div>
+                 <div class="form-row">
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputEmail4">Pay rate</label>
+                     <input type="text" class="form-control" id="inputEmail4" name="payrate" placeholder="Pay rate">
+                   </div>
+                   <div class="form-group col-md-6">
+                     <label class="label" for="inputPassword4">Status</label>
+                     <select type="text" name="status" placeholder="Status" class="form-control" class="name" id="inputPassword4">
+                       <option value="" disabled selected hidden>Select option</option>
+                       <option value="us">OPen</option>
+                       <option value="canada">Close</option>
+                     </seclect>
+                     </div>
+                 </div>
+
+                 <button type="submit" class="btn btn-primary btn-md">Sign in</button>
+               </form>
+             </div>
               </div>
 
         </div>
@@ -332,7 +455,7 @@
       </div>
    </div>
  </section>
-
+</main>
 <!--footer-->
 
 <footer>

@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Righteous&family=Roboto&family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap');
 body{
   padding: 0%;
   margin:0%;
-  /*font-family: "Montserrat";*/
+  /*font-family: 'Roboto', sans-serif;*/
+  /*sfont-family: "Montserrat", sans-serif;*/
   font-family: 'Lato';
   overflow-x: hidden !important;
 }
@@ -201,6 +203,7 @@ padding-bottom: 20px;
 /*section2*/
 .testimonials{
   margin: 50px auto;
+    font-family: 'Lato';
 }
 .testimonials h1{
   text-align: center;
@@ -261,12 +264,15 @@ padding-bottom: 20px;
   margin-top: 15px;
   color: black;
 }*/
-p{
+.profile p{
   font-size: 16px;
   line-height: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
 }
 .profile h3{
   font-family: 'Lato';
+  letter-spacing: 2px;
 }
 .profile:hover{
 /*  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);*/
@@ -294,6 +300,7 @@ p{
   margin-right: 45%;
   color: black;
   font-size: 30px;
+     font-family: 'Roboto', sans-serif;
   margin-top: 40px;
   padding-bottom: 20px;
 }
@@ -309,6 +316,8 @@ p{
 }
 #services p{
   text-align: left;
+  font-weight: light;
+     font-family: 'Roboto', sans-serif;
 }
 #services h4{
   color:#cd6b35;
@@ -411,6 +420,7 @@ footer{
   color: #d9d9d9;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  background-color: #242124;
 }
 .main-content{
   display: flex;
@@ -465,7 +475,7 @@ footer{
 .left .content1 .social a span{
   height: 40px;
   width: 40px;
-  background: #1a1a1a;
+  /*background: #1a1a1a;*/
   line-height: 40px;
   text-align: center;
   font-size: 18px;
@@ -481,7 +491,7 @@ footer{
 }
 .center .content1 .fas{
   font-size: 1.4375rem;
-  background: #1a1a1a;
+  /*background: #1a1a1a;*/
   height: 45px;
   width: 45px;
   line-height: 45px;
@@ -510,7 +520,7 @@ footer{
 }
 .right .content1 .link{
   text-decoration: none;
-    color: white;
+  color:  #d9d9d9;
 }
 .right .content1 .link:hover{
   text-decoration: none;

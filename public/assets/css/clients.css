@@ -126,7 +126,7 @@ body{
   position: relative;
   background-position: center center;
   background-size: cover;
-  padding-top: 125px;
+  padding-top: 12.5rem;
 }
 .content-banner:before{
   position: absolute;
@@ -144,8 +144,8 @@ body{
   line-height: 1.2;
   position: relative;
   z-index: 2;
-  margin: 30px 0px 12px;
-  padding-top: 40px;
+  margin: 3rem 0rem 1.0rem;
+  padding-top: 2rem;
 }
 .content-banner .subtitle{
   color: #ffffff;
@@ -216,12 +216,12 @@ body{
 }
 /*section*/
 .s2-para{
-  padding-top: 50px;
+  padding-top: 3rem;
   margin-bottom: 6%;
 }
 /*section3*/
 .section-header h3 {
-     font-size: 36px;
+     font-size: 3.1rem;
      color: #283d50;
      text-align: center;
      font-weight: 500;
@@ -230,8 +230,8 @@ body{
  .section-header p {
      text-align: center;
      margin: auto;
-     font-size: 15px;
-     padding-bottom: 60px;
+     font-size: 1.5rem;
+     padding-bottom: 6rem;
      color: #556877;
      width: 50%;
  }
@@ -298,7 +298,7 @@ body{
 footer{
   bottom: 0px;
   width: 100%;
-  background: #111;
+  background-color: #242124;
   color: #d9d9d9;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -354,8 +354,7 @@ footer{
 .left .content1 .social a span{
   height: 40px;
   width: 40px;
-  background: #1a1a1a;
-  line-height: 40px;
+line-height: 40px;
   text-align: center;
   font-size: 18px;
   border-radius: 5px;
@@ -370,7 +369,6 @@ footer{
 }
 .center .content1 .fas{
   font-size: 1.4375rem;
-  background: #1a1a1a;
   height: 45px;
   width: 45px;
   line-height: 45px;
@@ -399,7 +397,7 @@ footer{
 }
 .right .content1 .link{
   text-decoration: none;
-    color: white;
+    color: #d9d9d9;
 }
 .right .content1 .link:hover{
   text-decoration: none;
@@ -417,4 +415,17 @@ footer{
   .main-content .box{
     margin: 5px 0;
   }
+}
+
+
+
+
+@media(min-width: 1024px){
+
+}
+@media(min-width:768px) and (max-width:1023px){
+
+}
+@media(max-width:767px){
+
 }

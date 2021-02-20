@@ -459,10 +459,11 @@ align-items: center;
 footer{
   bottom: 0px;
   width: 100%;
-  background: #111;
+  background-color: #242124;
   color: #d9d9d9;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+ font-family: 'Poppins', sans-serif;
+  background-color: #242124;
 }
 .main-content{
   display: flex;
@@ -476,13 +477,16 @@ footer{
 .box h2{
   font-size: 1.125rem;
   font-weight: 600;
+  margin-left: 1.2rem;
   /*text-transform: uppercase;*/
 }
 .left{
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 .left p{
   font-size: 15px;
+  word-spacing: 1px;
+  color: #d9d9d9;
 }
 .box .content1{
   margin: 20px 0 0 0;
@@ -504,10 +508,7 @@ footer{
   background: #f12020;
   top: -10px;
 }
-.left .content1 p{
-  color: white;
 
-}
 .left .content1 .social{
   margin: 20px 0 0 0;
 
@@ -519,7 +520,7 @@ footer{
 .left .content1 .social a span{
   height: 40px;
   width: 40px;
-  background: #1a1a1a;
+  /*background: #1a1a1a;*/
   line-height: 40px;
   text-align: center;
   font-size: 18px;
@@ -535,7 +536,7 @@ footer{
 }
 .center .content1 .fas{
   font-size: 1.4375rem;
-  background: #1a1a1a;
+  /*background: #1a1a1a;*/
   height: 45px;
   width: 45px;
   line-height: 45px;
@@ -564,7 +565,7 @@ footer{
 }
 .right .content1 .link{
   text-decoration: none;
-    color: white;
+  color:  #d9d9d9;
 }
 .right .content1 .link:hover{
   text-decoration: none;
@@ -583,6 +584,7 @@ footer{
     margin: 5px 0;
   }
 }
+
 
 
 

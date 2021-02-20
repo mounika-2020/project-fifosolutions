@@ -56,6 +56,10 @@ app.get('/workreport1', routes);
 app.get('/workreport',(req,res) => {
   res.render('workreport');
 });
+app.get('/workreport',routes);
+app.post('/workreport1', routes);
+
+
 app.get('/candidateinfo',(req,res) => {
   res.render('candidateinfo',{user:'hi'});
 });

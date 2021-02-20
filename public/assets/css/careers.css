@@ -115,7 +115,7 @@
   position: relative;
   background-position: center center;
   background-size: cover;
-  padding-top: 125px;
+  padding-top: 9.1rem;
 }
 .content-banner:before{
   position: absolute;
@@ -133,8 +133,8 @@
   line-height: 1.2;
   position: relative;
   z-index: 2;
-  margin: 30px 0px 12px;
-  padding-top: 40px;
+  margin: 3rem 0rem 1.1rem;
+  padding-top: 3rem;
 }
 .content-banner .subtitle{
   color: #ffffff;
@@ -165,14 +165,14 @@
   margin-top: 0;
 }
 .banner-btn{
-  padding: 0 34px;
+  padding: 0 3.1rem;
   z-index: 1;
-  margin: 30px auto 25px;
+  margin: 3rem auto 2.2rem;
   line-height: 56px;
   position: relative;
   border-radius: 6px;
   height: 56px;
-  font-size: 16px;
+  font-size: 1.3rem;
   background-color: #fe4066;
   display: inline-block;
   color: #ffffff;
@@ -205,17 +205,17 @@
 }
 /*section2*/
 .testimonials{
-  margin: 140px auto;
+  margin: 8rem auto;
 }
 .testimonials .row{
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 .col-md-4{
-  margin: 40px auto;
+  margin: 3rem auto;
 
 }
 .profile{
-  padding: 70px 30px;
+  padding: 5rem 3rem;
   background-color: #efefef;
   width: 100%;
 }
@@ -232,7 +232,7 @@
 }
 .profile h3{
   font-size: 20px;
-  margin-top: 15px;
+  margin-top: 1.4rem;
   color: #ff9800;
 }
 p{
@@ -246,7 +246,7 @@ p{
 footer{
   bottom: 0px;
   width: 100%;
-  background: #111;
+  background-color:#242124;
   color: #d9d9d9;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -302,8 +302,7 @@ footer{
 .left .content1 .social a span{
   height: 40px;
   width: 40px;
-  background: #1a1a1a;
-  line-height: 40px;
+    line-height: 40px;
   text-align: center;
   font-size: 18px;
   border-radius: 5px;
@@ -318,7 +317,6 @@ footer{
 }
 .center .content1 .fas{
   font-size: 1.4375rem;
-  background: #1a1a1a;
   height: 45px;
   width: 45px;
   line-height: 45px;
@@ -347,7 +345,7 @@ footer{
 }
 .right .content1 .link{
   text-decoration: none;
-    color: white;
+    color: #d9d9d9;
 }
 .right .content1 .link:hover{
   text-decoration: none;

@@ -57,12 +57,12 @@ body{
 .content-banner{
   color: #ffffff;
   background-image: url("/img/business1.jpg");
-  min-height: 400px;
+  min-height:28rem;
   height: 100%;
   position: relative;
   background-position: center center;
   background-size: cover;
-  padding-top: 125px;
+  padding-top: 12.5rem;
 }
 .content-banner:before{
   position: absolute;
@@ -75,15 +75,15 @@ body{
   z-index: 1;
 }
 .content-banner .first-title{
-  font-size: 44px;
+  font-size: 4.4rem;
   font-weight: 400;
   line-height: 1.2;
   position: relative;
   z-index: 2;
-  margin: 0px 0px 12px;
+  margin: 0rem 0rem 1.6rem;
 }
 .content-banner .banner-desc{
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 150%;
   letter-spacing: 0;
   position: relative;
@@ -142,7 +142,7 @@ body{
 }
 .first-title{
   text-transform: capitalize;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .content-banner .subtitle{
   color: #ffffff;
@@ -280,7 +280,7 @@ p{
 footer{
   bottom: 0px;
   width: 100%;
-  background: #111;
+  background-color: #242124;
   color: #d9d9d9;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -296,6 +296,7 @@ footer{
 }
 .box h2{
   font-size: 1.125rem;
+  margin-left: 1.2rem;
   font-weight: 600;
   /*text-transform: uppercase;*/
 }
@@ -325,6 +326,7 @@ footer{
   background: #f12020;
   top: -10px;
 }
+
 .left .content .social{
   margin: 20px 0 0 0;
 
@@ -336,7 +338,7 @@ footer{
 .left .content .social a span{
   height: 40px;
   width: 40px;
-  background: #1a1a1a;
+
   line-height: 40px;
   text-align: center;
   font-size: 18px;
@@ -352,7 +354,7 @@ footer{
 }
 .center .content .fas{
   font-size: 1.4375rem;
-  background: #1a1a1a;
+
   height: 45px;
   width: 45px;
   line-height: 45px;
@@ -378,10 +380,11 @@ footer{
 }
 .right .content{
   margin-left: 45px;
+
 }
 .right .content .link{
   text-decoration: none;
-    color: white;
+    color: #d9d9d9;
 }
 .right .content .link:hover{
   text-decoration: none;
@@ -399,4 +402,58 @@ footer{
   .main-content .box{
     margin: 5px 0;
   }
+}
+
+@media(min-width: 1024px){
+  .content-banner .first-title{
+     font-size: 44px;
+     font-weight: 400;
+  }
+}
+@media(min-width:768px) and (max-width:1023px){
+  .content-banner .first-title{
+      font-size: 44px;
+      font-weight: 400;
+    }
+    .side{
+      margin-top: 2rem;
+    }
+   .side ul li{
+      margin: 0.5em;
+      margin-top: 1.1rem;
+      margin-left: 4rem;
+
+      }
+   .heading{
+      margin-right: 4.6rem;
+      font-size: 1.9rem;
+    }
+    .img-wrap{
+      width:100%;
+    }
+}
+@media(max-width:767px){
+  .content-banner .first-title{
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      }
+      .side{
+        margin-left: 1rem;
+        width: 19.6rem;
+      }
+      .side ul li{
+        margin: 0.5em;
+        margin-top: 1.1rem;
+        margin-left: 4rem;
+        }
+      .heading{
+        margin-right: 2.2rem;
+        font-size: 1.5rem;
+      }
+      .heading::after{
+        margin-left: 2rem;
+      }
+      .img-wrap{
+        width:100%;
+      }
 }

@@ -10,6 +10,7 @@ const jobseekermodel = require('../models/jobseekermodel');
 const trainingmodel = require('../models/trainingmodel');
 const contactusmodel = require('../models/contactusmodel');
 const workreport1 = require('../models/workreport1');
+const benchsalesaccount = require('../models/benchsalesaccount');
 const passport = require('passport');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -412,11 +413,10 @@ routes.post('/workreport1', (req, res) => {
                         }).save((err, data) => {
                             if (err) throw err;
 
-                            res.redirect('/workreport');
+                            res.redirect('alert("success")');
                         });
-
-    }
-});
+                    }
+           });
 
 routes.post('/workreport2', (req, res) => {
      var { candidate,jobtitle,jobportal,application,email,phone,client} = req.body;
@@ -436,6 +436,27 @@ routes.post('/workreport2', (req, res) => {
     }
 });
 
+
+routes.get('/benchsalesaccount', (req, res) => {
+    res.render('benchsalesaccount');
+})
+
+routes.post('/benchsalesaccount', (req, res) => {
+     var { position,client,visa,experience,vendor,email,phone,location,date,contacted,payrate,status} = req.body;
+    var err;
+    if (!position || !client || !visa || !experience || !vendor || !email  || !phone || !location || !date || !contacted  || !payrate || !status) {
+        err = "Please Fill All The Fields...";
+        res.render('workreport', { 'err': err });
+    }
+    if (typeof err == 'undefined') {
+                        benchsalesaccount({ position,client,visa,experience,vendor,email,phone,location,date,contacted,payrate,status
+                        }).save((err, data) => {
+                            if (err) throw err;
+
+                            res.redirect('/benchsalesaccount');
+                        });
+                    }
+           });
 // Authentication Strategy
 // ---------------
 

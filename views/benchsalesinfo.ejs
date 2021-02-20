@@ -127,7 +127,7 @@
           background-color: gray;
           align-items: center;
           justify-content: center;
-          min-height: 100vh;
+          min-height: 60vh;
           display: flex;
           position:relative;
           display: flex;
@@ -214,11 +214,73 @@
               .form-section{
                 margin-bottom: 0;
               }
+
+              h3{
+                color: orange;
+                text-align: center;
+                padding-top: 2rem;
+              }
+             .table-box
+             {
+               position: relative;
+                 margin: 3rem auto;
+             }
+
+             .table-row{
+                 display: table;
+                 width: 80%;
+                 margin: 10px auto;
+                 font-family: sans-serif;
+                 background: transparent;
+                 padding: 12px 0;
+                 color: #555;
+                 font-size: 13px;
+                 box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
+             }
+             .table-head{
+                 background: gray;
+                 box-shadow: none;
+                 color: black;
+                 font-weight: 600;
+             }
+             .table-head .table-cell{
+                 border-right: none;
+             }
+             .table-cell{
+                 display: table-cell;
+                 width: 20%;
+
+                 text-align: center;
+                 padding: 4px 0;
+                 border-right: 1px solid #d6d4d4;
+                 vertical-align: middle;
+             }
+               .table-cell p{
+                 color: black;
+                 padding-left: 3rem;
+               }
+             .first-cell{
+               text-align: left;
+                 padding-left: 10px;
+             }
+             .last-cell{
+                 border-right: none;
+             }
+             a{
+                 text-decoration: none;
+                 color: #555;
+             }
+
+             @media only screen and (max-width: 600px) {
+               .table-row {
+                 font-size: 11px;
+               }
+             }
         /*footer*/
         footer{
           bottom: 0px;
           width: 100%;
-          background: #111;
+          background-color: #242124;
           color: #d9d9d9;
           box-sizing: border-box;
           font-family: 'Poppins', sans-serif;
@@ -275,7 +337,6 @@
         .left .content .social a span{
           height: 40px;
           width: 40px;
-          background: #1a1a1a;
           line-height: 40px;
           text-align: center;
           font-size: 18px;
@@ -291,7 +352,6 @@
         }
         .center .content .fas{
           font-size: 1.4375rem;
-          background: #1a1a1a;
           height: 45px;
           width: 45px;
           line-height: 45px;
@@ -320,7 +380,7 @@
         }
         .right .content .link{
           text-decoration: none;
-            color: white;
+              color: #d9d9d9;
         }
         .right .content .link:hover{
           text-decoration: none;
@@ -398,7 +458,58 @@
    </div>
 </div>
 </section>
+<h3>Benchsales list</h3>
+<div class="table-box">
+        <div class="table-row table-head">
+            <div class="table-cell first-cell">
+                <p>Candidate name</p>
+            </div>
+            <div class="table-cell">
+                <p>Experience</p>
+            </div>
+            <div class="table-cell last-cell">
+                <p>Email</p>
+            </div>
+        </div>
 
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p><a href="">Kumar</a></p>
+            </div>
+            <div class="table-cell">
+                <p>4</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="">kumar@gmail.com</a>
+            </div>
+        </div>
+
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+               <p><a href="">Sandeep</a></p>
+            </div>
+            <div class="table-cell">
+                <p>3</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="">Sandeep@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                 <p><a href="">Raju</a></p>
+            </div>
+            <div class="table-cell">
+                <p>4</p>
+            </div>
+            <div class="table-cell last-cell">
+                <a href="">raju567@gmail.com</a>
+            </div>
+        </div>
+</div>
 
 <!--footer-->
 
